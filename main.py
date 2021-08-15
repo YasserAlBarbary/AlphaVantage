@@ -1,13 +1,12 @@
-from ApiModels.ApiFunction import Function
+from Api.Models.ApiKey import Session
+from Services.QuerySelector import  Query
+from Services.SymbolService import get_symbol_data
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    x = Function()
-    x.set_function("EMA")
-    print(x._function)
-# Press the green button in the gutter to run the script.
+def main(name):
+    pass
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    query = Query()
+    query.get_symbol_data()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
