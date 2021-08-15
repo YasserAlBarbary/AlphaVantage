@@ -1,6 +1,6 @@
 import requests
 
-def get_symbol_data(symbol, api_key):
+def retrieve_symbol_data(symbol, api_key):
 
     url = f'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords={symbol}&apikey={api_key}'
     r = requests.get(url)

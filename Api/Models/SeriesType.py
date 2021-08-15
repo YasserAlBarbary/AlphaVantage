@@ -7,7 +7,7 @@ class SeriesType:
     ]
 
     def __init__(self):
-        self._series_type = ""
+        self._series_type = "close"
 
     def get_series_type(self):
         return self._series_type
