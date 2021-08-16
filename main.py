@@ -1,12 +1,11 @@
-from Api.Models.ApiKey import Session
-from Services.QueryBuilderr import Query
-from Services.SymbolService import retrieve_symbol_data
+from Services.QueryBuilder import Query
 
 
-def main(name):
-    pass
-
-if __name__ == '__main__':
+def main():
     query = Query()
     query.build_query()
+    query.run()
 
+
+if __name__ == '__main__':
+    main()
