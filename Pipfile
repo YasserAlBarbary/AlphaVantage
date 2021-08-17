@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "2.26.0"
+query = "*"
 
 [dev-packages]
 

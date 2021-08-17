@@ -128,8 +128,6 @@ class Query:
                            "2 for Daily\n"
                            "3 for Weekly\n"
                            "4 for Monthly\n")
-        print("in retrieve_historical_prices")
-
         if time_frame == "1":
             self.function.set_function("TIME_SERIES_INTRADAY")
         elif time_frame == "2":
@@ -139,8 +137,6 @@ class Query:
         elif time_frame == "4":
             self.function.set_function("TIME_SERIES_MONTHLY")
         else:
-            print(f"<{time_frame}>")
-            print(f"<{type(time_frame)}>")
             raise ValueError("Wrong value for time frame, please restart")
         self.url += f'function={self.function.get_function()}&symbol={self.symbol.get_symbol()}'
 
@@ -149,8 +145,6 @@ class Query:
             self.retrieve_intraday_interval()
 
     def retrieve_current_quote(self):
-        print("in retrieve_current_quote")
-
         self.function.set_function("GLOBAL_QUOTE")
         self.url += f'function={self.function.get_function()}&symbol={self.symbol.get_symbol()}'
 
